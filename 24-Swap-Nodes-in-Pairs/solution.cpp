@@ -18,7 +18,7 @@ public:
             prev->next = q;
             q->next = p;
             p->next = r;
-            prep = p;
+            prev = p;
             p = r;
         }
         
