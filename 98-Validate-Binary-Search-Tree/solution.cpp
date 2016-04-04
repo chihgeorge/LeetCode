@@ -16,7 +16,7 @@ public:
     bool valid(TreeNode *p, int min, int max){
         if(p == NULL) return true;
         
-        return  p->val > p->left->val && p->val < p->right->val &&
+        return  p->val > min && p->val < max &&
                 valid(p->left, min, p->val) && valid(p->right, p->val, max);
     }
 };
