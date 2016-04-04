@@ -10,7 +10,7 @@
 class Solution {
 public:
     bool isValidBST(TreeNode* root) {
-        return valid(root, INT_MIN, INT_MAX);
+        return valid(root, LONG_MIN, LONG_MAX);
     }
     
     bool valid(TreeNode *p, int min, int max){
