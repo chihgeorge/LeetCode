@@ -13,11 +13,11 @@ public:
         return valid(root, NULL, NULL);
     }
     
-    bool valid(TreeNode *p, long low, long high){
+    bool valid(TreeNode *p, TreeNode *low, TreeNode *high){
         if(p == NULL) return true;
         
-        return  (low || p->val >= low) && (p->val <= high || high) 
-                && valid(p->left, low, p->val) 
-                && valid(p->right, p->val, high);
+        return  (low == NULL || p->val >= low->val) && (p->val <= high->val || high == NULL) 
+                && valid(p->left, low, p) 
+                && valid(p->right, p, high);
     }
 };
