@@ -24,7 +24,7 @@ public:
     bool isIncreasing(TreeNode *p){
         if( p == NULL)  return true;
         if(isIncreasing(p->left)){
-            if(prep != NULL && prep->val > p->val)  return false;
+            if(prep != NULL && prep->val >= p->val)  return false;
             prep = p;
             
             return isIncreasing(p->right);
