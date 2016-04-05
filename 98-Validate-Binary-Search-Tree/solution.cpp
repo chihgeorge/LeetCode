@@ -16,7 +16,7 @@ public:
     bool valid(TreeNode *p, long low, long high){
         if(p == NULL) return true;
         
-        return  (low == NULL || p->val > low) && (p->val < high || high == NULL) 
+        return  (low || p->val > low) && (p->val < high || high) 
                 && valid(p->left, low, p->val) 
                 && valid(p->right, p->val, high);
     }
