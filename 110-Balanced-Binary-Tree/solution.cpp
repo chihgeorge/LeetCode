@@ -10,7 +10,7 @@
 class Solution {
 public:
     bool isBalanced(TreeNode* root) {
-        
+        return maxDepth(root) != -1;
     }
     
     int maxDepth(TreeNode *root){
