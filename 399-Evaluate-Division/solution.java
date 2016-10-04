@@ -33,7 +33,7 @@ public class Solution {
         String pairKey = num1 + "," + num2;
         if(visited.contains(pairKey)){
             return null;
-        }else if(!numberMap.containsKey(num1) || (!numberMap.containsKey(num2)){
+        }else if(!numberMap.containsKey(num1) || (!numberMap.containsKey(num2))){
             return null;
         }else if(num1 == num2){
             return 1.0;
