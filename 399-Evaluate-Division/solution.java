@@ -1,6 +1,6 @@
 public class Solution {
     public double[] calcEquation(String[][] equations, double[] values, String[][] queries) {
-        Map<String, Map<String, double>> numberMap = new HashMap();
+        Map<String, Map<String, Double>> numberMap = new HashMap();
         int i = 0;
         for(String[] pair: equations){
             addPairs(numberMap, pair[0], pair[1], values[i]);
@@ -21,7 +21,7 @@ public class Solution {
     }
     
     private void addPairs(Map<String, Map<String, Double>> numberMap, String num1, String num2, double value){
-        Map<String, double> pairMap = numberMap.get(num1);
+        Map<String, Double> pairMap = numberMap.get(num1);
         if(pairMap == null) {
             pairMap = new HashMap<>();
             numberMap.put(num1, pairMap);
