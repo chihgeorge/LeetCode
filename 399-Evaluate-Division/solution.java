@@ -20,7 +20,7 @@ public class Solution {
         }
     }
     
-    private void addPairs(Map<String, Map<String, double>> numberMap, String num1, String num2, double value){
+    private void addPairs(Map<String, Map<String, Double>> numberMap, String num1, String num2, double value){
         Map<String, double> pairMap = numberMap.get(num1);
         if(pairMap == null) {
             pairMap = new HashMap<>();
@@ -29,7 +29,7 @@ public class Solution {
         pairMap.put(num2, value);
     }
     
-    private double findPairs(Map<String, Map<String, double>> numberMap, String num1, String num2, Set<String> visited){
+    private double findPairs(Map<String, Map<String, Double>> numberMap, String num1, String num2, Set<String> visited){
         String pairKey = num1 + "," + num2;
         if(visited.contains(pairKey)){
             return null;
