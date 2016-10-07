@@ -2,7 +2,7 @@ public class Solution {
     public List<String> findItinerary(String[][] tickets) {
         Map<String, PriorityQueue<String>> map = new HashMap<>();
         for (String[] ticket : tickets) {
-            map.add(ticket[0], new PriorityQueue()).add(ticket[1]);
+            map.computeIfAbsent(ticket[0], x -> new PriorityQueue()).add(ticket[1]);
         }
     
         List<String> result = new LinkedList();
